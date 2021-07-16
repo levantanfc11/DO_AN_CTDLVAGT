@@ -1,64 +1,59 @@
 merge <- function(a, b) {
-  # create temporary aray
-  temp <- numeric(length(a) + length(b))
-  
-  # take two variables which initially points to
-  # starting of the sorted sub arrays
-  # and j which points to starting of starting
-  # of temporary array
-  astart <- 1
-  bstart <- 1
-  j <- 1
-  for(j in 1 : length(temp)) {
-    # if a[astart] < b[bstart]
-    if((astart <= length(a) &&
-        a[astart] < b[bstart]) ||
-       bstart > length(b)) {
-      # insert a[astart] in temp and increment
-      # astart pointer to next
-      temp[j] <- a[astart]
-      astart <- astart + 1
-    }
+    # Tạo mảng tạm thời
+    temp <- numeric(length(a) + length(b))
+
+    # lấy hai biến ban đầu trỏ đến
+    # bắt đầu của các mảng con đã sắp xếp
+    # và j trỏ đến bắt đầu bắt đầu
+    # của mảng tạm thời
+    astart <- 1
+    bstart <- 1
+    j <- 1
+    for(j in 1 : length(temp)) {
+        # nếu a[astart] < b[bstart]
+        if((astart <= length(a) &&
+            a[astart] < b[bstart]) ||
+            bstart > length(b)) {
+            # chèn a[start] tạm thời 
+            # và tăng tới tiếp theo
+            temp[j] <- a[astart]
+            astart <- astart + 1
+        }
     else {
-      temp[j] <- b[bstart]
-      bstart <- bstart + 1
+            temp[j] <- b[bstart]
+            bstart <- bstart + 1
+        }
     }
-  }
-  temp
+    temp
 }
 
-# function to sort the array
+# Hàm để sắp xếp
 mergeSort <- function(arr) {
-  
-  # if length of array is greater than 1,
-  # then perform sorting
-  if(length(arr) > 1) {
-    
-    # find mid point through which
-    # array need to be divided
-    mid <- ceiling(length(arr)/2)
-    
-    # first part of array will be from 1 to mid
-    a <- mergeSort(arr[1:mid])
-    
-    # second part of array will be
-    # from (mid+1) to length(arr)
-    b <- mergeSort(arr[(mid+1):length(arr)])
-    
-    # merge above sorted arrays
-    merge(a, b)
-  }
-  # else just return arr with single element
-  else {
-    arr
-  }
+
+    # nếu độ dài của mảng lớn hơn 1 thì thực hiện sắp xếp
+    if(length(arr) > 1) {
+
+        # tìm điểm giữa mà mảng cần được chia
+        mid <- ceiling(length(arr)/2)
+
+        # phần đầu tiên của mảng sẽ từ 1 đến giữa
+        a <- mergeSort(arr[1:mid])
+
+        # phần thứ hai của mảng sẽ từ (mid + 1) đến chiều dài (arr)
+        b <- mergeSort(arr[(mid+1):length(arr)])
+
+        # hợp nhất các mảng đã sắp xếp ở trên
+        merge(a, b)
+    }
+# khác chỉ trả về arr với một phần tử duy nhất
+else {
+        arr
+    }
 }
 
-# take sample input
+# lấy danh sách ban đầu đầu vào
 arr <- sample(1:100, 10)
-
-# call mergeSort function
+# Gọi hàm mergeSort
 result <- mergeSort(arr)
-
-# print result
+# In ra kết quả
 result

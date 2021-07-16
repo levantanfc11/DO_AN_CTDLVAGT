@@ -1,22 +1,23 @@
+
 install.packages('dequer')
 
 library(dequer)
 
 # STACK
 s <- stack()
-for (i in 11:13) push(s, i)
-# Th�m l???n lu???t ph???n t??? 11, 12, 13
+for (i in 1:3) push(s, i)
+# Thêm lần lượt phần tử 1, 2, 3
 str(s)
-# Hi???n t???i 11-12-13
+# Hiện tại 1-2-3
 pop(s)
-# L???y ph???n t??? cu???i c�ng trong danh s�ch l� 13
+# Lấy phần tử cuối cùng trong danh sách là 3
 str(s)
-# Hi???n t???i c� 11-12
+# Hiện tại có 1-2
 pop(s)
-# L???y ph???n t??? cu???i c�ng trong danh s�ch l� 12
+# Lấy phần tử cuối cùng trong danh sách là 2
 str(s)
-# Hi???n t???i c� 11
+# Hiện tại có 1
 pop(s)
-# L???y ph???n t??? cu???i c�ng trong danh s�ch l� 11
+# Lấy phần tử cuối cùng trong danh sách là 1
 str(s)
-# Hi???n t???i kh�ng c� ph???n t??? 
+# Hiện tại không có phần tử 
