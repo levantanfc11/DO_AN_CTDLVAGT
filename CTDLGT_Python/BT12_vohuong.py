@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -24,9 +18,6 @@ nx.draw_networkx_labels(G, pos,font_size=30)
 nx.draw_networkx_edges(G, pos, edge_color='black', arrows=True)
 nx.draw_networkx_edges(G, pos, arrows=False)
 plt.show()
-
-
-# In[ ]:
 
 
 

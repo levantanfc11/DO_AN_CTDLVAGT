@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
 
 
 class Node:
@@ -29,11 +25,6 @@ if __name__=='__main__':
     listrong.head.next = thuhai
     listrong.head.next = thuba
     #Như vậy danh sách đã được liên kết với nhau và kết thúc ở vị trí thuba(Null)
-    
-    
-
-
-# In[ ]:
 
 
 

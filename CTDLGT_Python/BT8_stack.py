@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
-
 
 class Stack:
     def __init__(self):
@@ -49,9 +44,6 @@ if __name__ == "__main__":
     a.Thêm_phần_tử(9.4)
 
     a.Lấy_phần_tử()
-
-
-# In[ ]:
 
 
 

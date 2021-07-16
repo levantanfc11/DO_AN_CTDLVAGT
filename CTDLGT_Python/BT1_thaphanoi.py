@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
 
 
 dia = int(input("Nhập số lượng đĩa:"))
@@ -15,7 +12,7 @@ def baitoanthaphanoi (dia, A, B, C):
 baitoanthaphanoi(dia, "A", "B", "C")
 
 
-# In[ ]:
+
 
 
 
